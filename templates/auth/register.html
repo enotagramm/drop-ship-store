@@ -1,4 +1,12 @@
 {% extends 'index.html' %}
 {% block content %}
-
+<form method="post" action="{% url 'register' %}">
+    {% csrf_token %}
+    {% for item in user_form %}
+    {{ item.label_tag }}
+    {{ item }}
+    {{ item.errors }}
+    {% endfor %}
+    <button type="submit">Зарегистрироваться</button>
+</form>
 {% endblock %}
