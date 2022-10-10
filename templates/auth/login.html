@@ -2,7 +2,10 @@
 {% block content %}
 <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
-    {{ login_form }}
+    {% for item in login_form %}
+    {{ item.label_tag }}
+    {{ item }}
+    {% endfor %}
     {{ attention }}
     <button type="submit">Войти</button>
 </form>
