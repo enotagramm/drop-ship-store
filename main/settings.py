@@ -54,6 +54,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'main.urls'
 
+URL_SCRAPING_DOMAIN = 'https://spb.lzmmg.ru/'
+URL_SCRAPING = 'https://spb.lzmmg.ru/catalog/truby-profilnye/filter/clear/apply/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
