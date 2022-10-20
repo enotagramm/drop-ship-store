@@ -47,7 +47,7 @@ class RegisterView(TemplateView):
             user.set_password(user.password)
             user.save()
             login(request, user)
-            return redirect("home")
+            return redirect("index")
 
         context = {'user_form': user_form}
         return render(request, 'auth/register.html', context)

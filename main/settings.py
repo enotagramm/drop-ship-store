@@ -54,8 +54,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'main.urls'
 
-URL_SCRAPING_DOMAIN = 'https://spb.lzmmg.ru/'
-URL_SCRAPING = 'https://spb.lzmmg.ru/catalog/truby-profilnye/filter/clear/apply/'
+URL_SCRAPING_DOMAIN = 'https://petrovich.ru'
+URL_SCRAPING = 'https://petrovich.ru/catalog/12106/'
 
 TEMPLATES = [
     {

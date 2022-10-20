@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="container">
+    <form method="post" action="{% url 'fill_database' %}">
+        {% csrf_token %}
+        <button class="btn btn-outline-dark" type="submit" name="fill_database">
+            <span role="status">Жмяхай на скрэпинг</span>
+        </button>
+    </form>
+    {% if message %}
+        ERROR
+        <span style="color: red">
+            {{ message }}
+        </span>
+    {% endif %}
+</div>
+{% endblock %}

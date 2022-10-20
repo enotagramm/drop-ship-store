@@ -75,7 +75,7 @@ class Order(models.Model):
         verbose_name_plural = 'Заказы'
 
     @staticmethod
-    def get_cart(user: User): # Получение корзины и вернуть назад
+    def get_cart(user: User):   # Получение корзины и вернуть назад
         cart = Order.objects.filter(user=user, status=Order.STATUS_CART).first()
         if cart and (timezone.now() - cart.creation_time).days > 7:     # если корзина существует больше 7 дней
             cart.delete()   # она удаляется
